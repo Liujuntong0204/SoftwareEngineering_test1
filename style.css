@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* 添加这一行 */
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    min-height: 300px; /* Ensure minimum height for container */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.history-list {
+    text-align: left; /* 左对齐 */
+    list-style-type: disc; /* 显示默认的项目符号 */
+    padding-left: 20px; /* 为列表项留出一些空间 */
+    margin: 0;
+}
+
+.history-list li {
+    margin-bottom: 10px; /* 列表项之间的间距 */
+}
+
+/* 可选：为链接添加一些样式 */
+.history-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.history-list a:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: center;
+    justify-content: center; /* 居中对齐 */
+    gap: 10px; /* 标签和输入框之间的间距 */
+}
+.form-group label {
+    flex: 0 0 auto; /* 标签不占额外空间 */
+    width: 100px; /* 固定标签宽度 */
+    text-align: right; /* 标签右对齐 */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Adjust for padding */
+    text-align:left;
+}
+
+input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Adjust for padding */
+    text-align:left;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around; /* 按钮之间平均分配空间 */
+    margin-bottom: 20px; /* 与表单之间的间距 */
+}
+.button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    flex: 1; /* 每个按钮占据相等的空间 */
+    margin: 0 5px; /* 按钮之间的间距 */
+}
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    text-align: left;
+    max-height: 500px; /* Limit the height of results */
+    overflow-y: auto; /* Enable scrolling within results */
+}
+
+#results div {
+    margin-bottom: 15px;
+}
+
+#results a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#results a:hover {
+    text-decoration: underline;
+}
+
+#results p {
+    font-size: 14px; /* Smaller font for content */
+    margin: 0;
+}
+
+#results .url {
+    font-size: 12px;
+    color: #007bff;
+    margin: 0;
+}
+
+#results .snapshot-link {
+    display: block;
+    color: #838e9d;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#results .snapshot-link:hover {
+    text-decoration: underline;
+}
+
+.file-links {
+    margin-top: 20px; /* 上方间距 */
+}
+
+.file-links a {
+    display: block; /* 每个链接占一行 */
+    color: #607bcb; /* 蓝色文字 */
+    text-decoration: none; /* 去掉下划线 */
+    font-size: 14px; /* 字体稍小 */
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.file-links a:hover {
+    color: #4c77a4; /* 鼠标悬停时变深 */
+}
+
+.file-links a::after {
+    content: " ⬇"; /* 添加下载图标 */
+    font-size: 0.8em; /* 图标稍小 */
+    margin-left: 3px; /* 图标与文本之间有间距 */
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+.intro-banner {
+    width: 100%;
+    background-color: transparent;
+    padding: 40px 20px;
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.intro-content img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.intro-text {
+    flex: 1;
+    color: white;
+}
+
+.intro-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card img {
+    width: 100%;
+    max-width: 250px;  /* 限制最大宽度 */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.logout {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout:hover {
+    text-decoration: underline;
+}
+
+
+.page-header {
+    background-color: transparent; /* 去掉背景色 */
+    text-align: center;
+    padding: 30px 0 20px;
+}
+.user-info {
+    display: flex;
+    gap: 20px; /* 元素之间间隔 */
+    font-size: 16px;
+}
+.page-header h1 {
+    font-family: 'HarmonyOS Sans', 'Noto Sans SC', '思源黑体', 'Microsoft YaHei', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #fefefe; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
+    margin: 0;
+}
+
