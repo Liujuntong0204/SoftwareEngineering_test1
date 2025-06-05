@@ -41,11 +41,7 @@ def register():
         phone = request.form['phone']
         role = int(request.form['role'])
 
-        # 禁止注册管理员账号
-        if role == 0:
-            flash("不允许注册管理员账号。")
-            return redirect(url_for('register'))
-
+  123
         conn = pymysql.connect(**db_config)
         cursor = conn.cursor()
 
